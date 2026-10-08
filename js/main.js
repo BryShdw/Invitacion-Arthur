@@ -8,7 +8,7 @@ const CONFIG = {
   eventDate: '2026-10-24T16:00:00-05:00',
   eventEnd: '2026-10-24T20:00:00-05:00',
   title: 'Primer añito de Arthur Jaziel 🦖',
-  mapsUrl: 'https://maps.app.goo.gl/yNcyCmgx2SY7xG256',
+  mapsUrl: "https://www.google.com/maps/place/11%C2%B055'25.8%22S+77%C2%B003'08.1%22W/@-11.9238323,-77.0548324,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-11.9238323!4d-77.0522575?hl=es&entry=ttu&g_ep=EgoyMDI2MTAwNi4wIKXMDSoASAFQAw%3D%3D",
 
   // Nombre o dirección del lugar (déjalo vacío para mostrar el texto por defecto)
   venueName: '',
@@ -227,6 +227,9 @@ if (!document.getElementById('cover')) revealHeroNow();
 (function initLinks() {
   const venue = document.getElementById('venueName');
   if (venue && CONFIG.venueName) venue.textContent = CONFIG.venueName;
+
+  const mapBtn = document.getElementById('mapBtn');
+  if (mapBtn && CONFIG.mapsUrl) mapBtn.href = CONFIG.mapsUrl;
 
   const wa = document.getElementById('rsvpBtn');
   const actionsBox = document.getElementById('actionsBox');
