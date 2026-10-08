@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Mi Primer Añito · Arthur Jaziel 🦖</title>
+  <meta name="description" content="¡Estás invitado al primer cumpleaños de Arthur Jaziel! Sábado 24 de octubre, 4:00 p.m." />
+  <meta name="theme-color" content="#3f9a3a" />
+
+  <!-- Vista previa al compartir (WhatsApp / redes) -->
+  <meta property="og:title" content="Mi Primer Añito · Arthur Jaziel 🦖" />
+  <meta property="og:description" content="Sábado 24 de octubre · 4:00 p.m. ¡Te espero para celebrar!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/arthur-dino.webp" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦖</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Lilita+One&family=Nunito:wght@600;800&display=swap" rel="stylesheet" />
+
+  <link rel="preload" as="image" href="assets/img/arthur-dino.webp" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="is-locked">
+
+  <!-- Sprite de huellas de dinosaurio -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="huella" viewBox="0 0 64 64">
+      <path d="M32 30c-9 0-16 8-16 17 0 7 6 11 16 11s16-4 16-11c0-9-7-17-16-17z"/>
+      <path d="M14 30c-4 0-7-6-6-12 1-5 5-6 8-2 3 5 2 14-2 14z"/>
+      <path d="M32 22c-4 0-6-6-5-13 1-6 9-6 10 0 1 7-1 13-5 13z"/>
+      <path d="M50 30c-4 0-5-9-2-14 3-4 7-3 8 2 1 6-2 12-6 12z"/>
+    </symbol>
+  </svg>
+
+  <!-- Fondo animado (rayos de sol) -->
+  <div class="sunburst" aria-hidden="true"></div>
+
+  <!-- Hojas decorativas en escritorio -->
+  <img class="deco-leaf deco-leaf--bl" src="assets/img/hojas.webp" alt="" aria-hidden="true" />
+  <img class="deco-leaf deco-leaf--tr" src="assets/img/hojas-r.webp" alt="" aria-hidden="true" />
+
+  <!-- ============ PORTADA: HUEVO ============ -->
+  <div class="cover" id="cover">
+    <p class="cover__kicker">Tienes una invitación especial</p>
+    <button class="egg" id="egg" type="button" aria-label="Abrir la invitación">
+      <span class="egg__glow" aria-hidden="true"></span>
+      <img class="egg__baby" src="assets/img/uno.webp" alt="" aria-hidden="true" />
+      <span class="egg__half egg__half--bottom" aria-hidden="true"></span>
+      <span class="egg__half egg__half--top" aria-hidden="true"></span>
+    </button>
+    <p class="cover__hint">
+      <svg class="cover__paw"><use href="#huella"/></svg>
+      Toca el huevo para abrir
+    </p>
+  </div>
+
+  <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+
+  <!-- ============ INVITACIÓN ============ -->
+  <main class="card" id="invitacion">
+
+    <!-- 1. HERO -->
+    <section class="section hero">
+      <div class="balloons" aria-hidden="true">
+        <span class="balloon" style="--x:-4%;--d:0s;--s:1.05"></span>
+        <span class="balloon" style="--x:12%;--d:.6s;--s:.9"></span>
+        <span class="balloon" style="--x:27%;--d:1.2s;--s:1.1"></span>
+        <span class="balloon" style="--x:43%;--d:.3s;--s:.95"></span>
+        <span class="balloon" style="--x:58%;--d:.9s;--s:1.1"></span>
+        <span class="balloon" style="--x:73%;--d:1.5s;--s:.9"></span>
+        <span class="balloon" style="--x:88%;--d:.4s;--s:1.05"></span>
+      </div>
+
+      <h1 class="title-pop reveal">¡Un día muy<br/>especial está<br/>llegando!</h1>
+
+      <div class="hero__stage reveal" style="--delay:.2s">
+        <img class="leaf leaf--l" src="assets/img/hojas.webp" alt="" aria-hidden="true" />
+        <img class="leaf leaf--r" src="assets/img/hojas-r.webp" alt="" aria-hidden="true" />
+        <img class="hero__baby" src="assets/img/arthur-dino.webp" width="800" height="787"
+             alt="Ilustración de Arthur vestido de dinosaurio saludando" />
+      </div>
+
+      <a class="scroll-cue" href="#primer-anito" aria-label="Ver más">
+        <svg><use href="#huella"/></svg>
+        <span>Desliza</span>
+      </a>
+    </section>
+
+    <!-- Huellas -->
+    <div class="tracks" aria-hidden="true">
+      <svg><use href="#huella"/></svg><svg><use href="#huella"/></svg><svg><use href="#huella"/></svg>
+      <svg><use href="#huella"/></svg><svg><use href="#huella"/></svg>
+    </div>
+
+    <!-- 2. MI PRIMER AÑITO -->
+    <section class="section first" id="primer-anito">
+      <p class="script reveal">¡Celebremos juntos 365 días<br/>de mucho amor y alegría!</p>
+
+      <h2 class="title-pop title-pop--big reveal" style="--delay:.1s">Mi primer<br/>añito</h2>
+
+      <p class="name reveal" style="--delay:.2s">
+        <span>Arthur</span>
+        <span>Jaziel</span>
+      </p>
+
+      <div class="first__stage">
+        <img class="first__one reveal reveal--pop" style="--delay:.3s"
+             src="assets/img/uno.webp" width="520" height="878" loading="lazy"
+             alt="Número uno en forma de dinosaurio con corona" />
+        <span class="mini-balloon mini-balloon--a" aria-hidden="true"></span>
+        <span class="mini-balloon mini-balloon--b" aria-hidden="true"></span>
+        <span class="star star--a" aria-hidden="true">★</span>
+        <span class="star star--b" aria-hidden="true">★</span>
+        <span class="star star--c" aria-hidden="true">★</span>
+      </div>
+    </section>
+
+    <div class="tracks tracks--rev" aria-hidden="true">
+      <svg><use href="#huella"/></svg><svg><use href="#huella"/></svg><svg><use href="#huella"/></svg>
+      <svg><use href="#huella"/></svg><svg><use href="#huella"/></svg>
+    </div>
+
+    <!-- 3. FOTO -->
+    <section class="section photo">
+      <h2 class="script script--title reveal">¡Te invito a mi<br/>cumple!</h2>
+
+      <div class="photo__frame reveal reveal--pop" style="--delay:.15s">
+        <span class="photo__ring" aria-hidden="true"></span>
+        <div class="photo__flip" id="photoFlip" role="button" tabindex="0"
+             aria-label="Foto de Arthur. Toca para ver otra foto">
+          <img class="photo__img photo__img--a" src="assets/img/arthur-foto.webp" width="720" height="720"
+               loading="lazy" alt="Foto de Arthur sonriendo" />
+          <img class="photo__img photo__img--b" src="assets/img/arthur-foto-2.webp" width="720" height="720"
+               loading="lazy" alt="Foto de Arthur mirando a la cámara" />
+        </div>
+        <img class="leaf leaf--photo-l" src="assets/img/hojas.webp" alt="" aria-hidden="true" loading="lazy" />
+        <img class="leaf leaf--photo-r" src="assets/img/hojas.webp" alt="" aria-hidden="true" loading="lazy" />
+        <img class="photo__peek" src="assets/img/uno.webp" alt="" aria-hidden="true" loading="lazy" />
+      </div>
+      <p class="photo__tip">Toca la foto 💚</p>
+    </section>
+
+    <!-- 4. DETALLES -->
+    <section class="section details">
+      <h2 class="script script--title reveal">¡Ven a festejar!</h2>
+
+      <div class="info reveal reveal--pop" style="--delay:.1s">
+        <div class="info__row">
+          <div class="info__col">
+            <span class="info__label">Sábado</span>
+            <span class="info__big">24</span>
+            <span class="info__label">de Octubre</span>
+          </div>
+          <span class="info__divider" aria-hidden="true"></span>
+          <div class="info__col">
+            <span class="info__label">Hora</span>
+            <span class="info__big">4:00</span>
+            <span class="info__label">p.m.</span>
+          </div>
+        </div>
+
+        <span class="info__line" aria-hidden="true"></span>
+
+        <span class="info__label info__label--lg">Lugar</span>
+        <p class="info__place" id="venueName">¡Toca el botón para ver la ubicación!</p>
+
+        <a class="btn btn--map" id="mapBtn" href="https://maps.app.goo.gl/yNcyCmgx2SY7xG256"
+           target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          Ver ubicación
+        </a>
+      </div>
+
+      <!-- Cuenta regresiva -->
+      <div class="countdown reveal" style="--delay:.2s" id="countdown" aria-live="polite">
+        <p class="countdown__title">Faltan</p>
+        <div class="countdown__grid">
+          <div class="cd"><span class="cd__num" data-unit="d">00</span><span class="cd__lbl">días</span></div>
+          <div class="cd"><span class="cd__num" data-unit="h">00</span><span class="cd__lbl">horas</span></div>
+          <div class="cd"><span class="cd__num" data-unit="m">00</span><span class="cd__lbl">min</span></div>
+          <div class="cd"><span class="cd__num" data-unit="s">00</span><span class="cd__lbl">seg</span></div>
+        </div>
+      </div>
+
+      <div class="actions reveal" style="--delay:.25s" id="actionsBox" hidden>
+        <a class="btn btn--wa" id="rsvpBtn" target="_blank" rel="noopener" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.3z"/></svg>
+          Confirmar asistencia
+        </a>
+      </div>
+    </section>
+
+    <!-- 5. TE ESPERO -->
+    <section class="section outro">
+      <img class="garland" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'%3E%3Cpath d='M0 6 Q200 40 400 6' fill='none' stroke='%23a07a3c' stroke-width='2'/%3E%3Cg%3E%3Cpath d='M14 9 l26 3 -10 30z' fill='%2387c540'/%3E%3Cpath d='M62 16 l26 2 -11 30z' fill='%23f39a3d'/%3E%3Cpath d='M110 21 l26 1 -12 30z' fill='%233f9a3a'/%3E%3Cpath d='M158 23 l26 0 -13 31z' fill='%23f2c94c'/%3E%3Cpath d='M206 23 l26 0 -13 31z' fill='%2387c540'/%3E%3Cpath d='M254 22 l26 -1 -12 30z' fill='%23f39a3d'/%3E%3Cpath d='M302 18 l26 -2 -11 30z' fill='%233f9a3a'/%3E%3Cpath d='M350 12 l26 -3 -10 30z' fill='%23f2c94c'/%3E%3C/g%3E%3C/svg%3E" alt="" aria-hidden="true" />
+
+      <h2 class="title-pop reveal">Mi primer<br/>añito</h2>
+      <p class="script script--title script--espero reveal" style="--delay:.15s">¡Te espero!</p>
+
+      <div class="outro__stage">
+        <img class="leaf leaf--out-l" src="assets/img/hojas.webp" alt="" aria-hidden="true" loading="lazy" />
+        <img class="leaf leaf--out-r" src="assets/img/hojas-r.webp" alt="" aria-hidden="true" loading="lazy" />
+        <img class="outro__dinos" src="assets/img/dinos.webp" width="1000" height="672"
+             alt="Cuatro bebés dinosaurio sonrientes" />
+      </div>
+
+      <p class="signature">Con cariño, Arthur Jaziel y familia 💚</p>
+    </section>
+  </main>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
